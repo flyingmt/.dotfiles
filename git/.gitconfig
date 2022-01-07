@@ -1,6 +1,6 @@
 [user]
-	name = Jake Wiesler
-	email = jakewiesler@gmail.com
+	name = Jun-Hee Lee
+	email = flyingmt@gmail.com
 [core]
 	excludesfile = ~/.gitignore_global
     editor = nvim
