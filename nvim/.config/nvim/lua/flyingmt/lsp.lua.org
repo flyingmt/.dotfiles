@@ -3,6 +3,7 @@ local cmp_nvim_lsp = require('cmp_nvim_lsp')
 local lspkind = require('lspkind')
 local luasnip = require('luasnip')
 local nvim_lsp = require('lspconfig')
+local null_ls = require('null-ls')
 
 --
 -- Lspconfig
@@ -46,7 +47,7 @@ capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 
 -- Use a loop t conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'tsserver', 'svelte', 'rust_analyzer' }
+local servers = { 'tsserver', 'svelte' }
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
         capabilities = capabilities,
@@ -57,6 +58,34 @@ for _, lsp in ipairs(servers) do
     }
 end
 
+
+--
+-- Null-ls
+--
+
+null_ls.config({
+    sources = {
+        -- prettierd is installed globally via npm
+        null_ls.builtins.formatting.prettierd
+    }
+})
+
+-- null-ls is a general purpose language server that doesn't need
+-- the same config as actual language servers like tsserver, so
+-- setup is a little different.
+nvim_lsp['null-ls'].setup({
+    on_attach = function(client, bufnr)
+        -- Autoformat
+        if client.resolved_capabilities.document_formatting then
+           vim.cmd [[augroup Format]]
+           vim.cmd [[autocmd! * <buffer>]]
+           vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+           vim.cmd [[augroup END]]
+        end
+        -- call local on_attach
+        return on_attach(client, bufnr)
+    end
+})
 
 
 --

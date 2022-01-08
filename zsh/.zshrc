@@ -7,6 +7,8 @@ fi
 
 # Supports a bin directory inside home directory
 export PATH=${HOME}/bin:${PATH}
+export PATH=${HOME}/.dotnet:${PATH}
+export PATH=${HOME}/.local/bin:${PATH}
 
 # Export nvm completion settings for lukechilds/zsh-nvm plugin
 # Note: This must be exported before the plugin is bundled

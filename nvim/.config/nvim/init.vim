@@ -41,24 +41,40 @@ Plug 'nvim-lualine/lualine.nvim'                   " Status line
 Plug 'akinsho/bufferline.nvim'                     " Buffers
 Plug 'machakann/vim-highlightedyank'               " Highlight yanked text
 Plug 'kyazdani42/nvim-tree.lua'                    " File explorer
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' } " Color scheme
+"Plug 'folke/tokyonight.nvim', { 'branch': 'main' } " Color scheme
+Plug 'ap/vim-css-color'				" CSS Color Preview
+Plug 'rafi/awesome-vim-colorschemes'	" Retro Scheme
+
 " Lsp
 Plug 'neovim/nvim-lspconfig'     
-Plug 'jose-elias-alvarez/null-ls.nvim'
+"Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 " Autocompletion
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'onsails/lspkind-nvim'
+" Snippet completion source for nvim-cmp
+Plug 'hrsh7th/cmp-vsnip'
+" Other usefull completion sources
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-buffer'
+" To enable more of the features of rust-analyzer, such as inlay hints and more!
+Plug 'simrat39/rust-tools.nvim'
+" Snippet engine
+Plug 'hrsh7th/vim-vsnip'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
-" Telescope
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+
+" Telescope
+"Plug 'nvim-telescope/telescope.nvim'
+"Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 call plug#end()
 
@@ -68,8 +84,8 @@ lua require('flyingmt')
 " --- Colors
 
 set background=dark
-colorscheme tokyonight
-
+"colorscheme tokyonight
+colorscheme jellybeans
 
 " --- Remaps
 
