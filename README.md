@@ -6,8 +6,15 @@
     - $ sudo vim /etc/pam.d/chsh
     - Comment 'auth required pam_shells.so'
 
-3. Install Packages
+3. Check the DNS settings (network issue with WSL & Docker)
+    
+    - sudo vim /etc/resolv.conf
+    - Change the nameserver to '8.8.8.8'
+
+4. Install Packages
     - sudo apt install direnv
+
+5. Change Terminal Fonts to NF
 
 ### .dotfiles
 
@@ -30,9 +37,25 @@
 
 ### Installing Tools
 
-- tsserver
-- rust_analyser
-- rustup
-- golang
 - node using nvm
+    - nvm install 16.13.2
+- tsserver
+    - npm install -g typescript typescript-language-server
+- rustup
+    - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+- rust_analyser
+    - $ mkdir -p ~/.local/bin
+    - $ curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
+    - $ chmod +x ~/.local/bin/rust-analyzer
+- dotnet
+    - wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+    - sudo dpkg -i packages-microsoft-prod.deb
+    - rm packages-microsoft-prod.deb
+    - sudo apt-get update; \
+        sudo apt-get install -y apt-transport-https && \
+        sudo apt-get update && \
+        sudo apt-get install -y dotnet-sdk-6.0
+- golang
+    - sudo apt install golang-go
+
 
