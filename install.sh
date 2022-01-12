@@ -1,5 +1,5 @@
 # install nix
-curl -L https://nixos.org/nix/install | sh
+sh <(curl -L https://nixos.org/nix/install) --no-daemon
 
 # source nix
 . ~/.nix-profile/etc/profile.d/nix.sh
