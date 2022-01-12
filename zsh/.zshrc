@@ -9,6 +9,7 @@ fi
 export PATH=${HOME}/bin:${PATH}
 export PATH=${HOME}/.cargo/bin:${PATH}
 export PATH=${HOME}/.dotnet:${PATH}
+export PATH=${HOME}/.dotnet/tools:${PATH}
 export PATH=${HOME}/.local/bin:${PATH}
 
 # Export nvm completion settings for lukechilds/zsh-nvm plugin
