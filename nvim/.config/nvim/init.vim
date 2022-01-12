@@ -97,6 +97,8 @@ nnoremap <silent><leader>[ :BufferLineCyclePrev<Cr>
 nnoremap <silent><leader>] :BufferLineCycleNext<Cr>
 nnoremap <silent><leader>q :bdelete<Cr>
 
+" Save
+nnoremap <silent> <C-S> :w<cr>
 
 " --- Autocommands
 
