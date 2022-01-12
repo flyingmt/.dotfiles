@@ -6,6 +6,9 @@
     - $ sudo vim /etc/pam.d/chsh
     - Comment 'auth required pam_shells.so'
 
+3. Install Packages
+    - sudo apt install direnv
+
 ### .dotfiles
 
 0. Go to home path by 'cd ~'
