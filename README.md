@@ -1,6 +1,6 @@
 # Prerequirements
 
-1. Update packages by 'sudo apt update'
+1. Update packages by 'sudo apt update' and 'sudo apt upgrade'
 
 # .dotfiles
 
