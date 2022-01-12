@@ -1,3 +1,7 @@
+# Prerequirements
+
+1. Update packages by 'sudo apt update'
+
 # .dotfiles
 
 1. Clone this repository
