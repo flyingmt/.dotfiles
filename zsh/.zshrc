@@ -7,6 +7,7 @@ fi
 
 # Supports a bin directory inside home directory
 export PATH=${HOME}/bin:${PATH}
+export PATH=${HOME}/.cargo/bin:${PATH}
 export PATH=${HOME}/.dotnet:${PATH}
 export PATH=${HOME}/.local/bin:${PATH}
 
