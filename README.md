@@ -1,6 +1,9 @@
 # Prerequirements
 
 1. Update packages by 'sudo apt update' and 'sudo apt upgrade'
+2. Disable chsh:PAM authentication
+  - $ sudo vim /etc/pam.d/chsh
+  - Comment 'auth required pam_shells.so'
 
 # .dotfiles
 
