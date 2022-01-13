@@ -18,7 +18,13 @@ nix-env -iA \
 	nixpkgs.bat \
 	nixpkgs.gnumake \
 	nixpkgs.gcc \
-	nixpkgs.direnv
+	nixpkgs.direnv \
+	nixpkgs.rustup \
+	nixpkgs.dotnet-sdk \
+	nixpkgs.go \
+	nixpkgs.python310 \
+	nixpkgs.maven \
+	nixpkgs.jdk8 \
 
 # stow dotfiles
 stow git
