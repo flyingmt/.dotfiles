@@ -1,52 +1,82 @@
+## .dotfiles for Ubuntu on WSL
+
 ### Prerequirements
 
-1. Update packages by 'sudo apt update' and 'sudo apt upgrade'
+1. Update package repos and packages
+
+    ```bash
+    $ sudo apt update
+    $ sudo apt upgrade
+    ```
+
 2. Disable chsh:PAM authentication
 
-    - $ sudo vim /etc/pam.d/chsh
-    - Comment 'auth required pam_shells.so'
+    ```bash
+    $ sudo vim /etc/pam.d/chsh
+    ```
 
-3. Check the DNS settings (network issue with WSL & Docker)
+    Comment line with 'auth required pam_shells.so'
+
+3. Check the DNS settings
+
+    Sometimes on WSL with Docker the network doesn't work.
+
+    ```bash
+    $ sudo vim /etc/resolve.conf
+    ```
     
-    - sudo vim /etc/resolv.conf
-    - Change the nameserver to '8.8.8.8'
+    Change the nameserver value to '8.8.8.8'
 
 4. Install Packages
-    - sudo apt install direnv
 
-5. Change Terminal Fonts to NF
+    ```bash
+    $ sudo apt install direnv
+    ```
 
-### .dotfiles
+5. Change Terminal Fonts to your favorite Nerd Font
 
-0. Go to home path by 'cd ~'
+    Link : https://www.nerdfonts.com/font-downloads
+
+### Config for shell with the dotfiles
+
+0. Go to home path
+
+    ```bash
+    $ cd ~
+    ```
+
 1. Clone this repository
+
+    ```bash
+    $ git clone https://github.com/flyingmt/.dotfiles.git
+    ```
+
 2. Run `install.sh`
-3. Open up new window to initiate `zsh` shell
+
+    ```bash
+    $ cd .dotfiles
+    $ ./install.sh
+    ```
+
+3. Open up new terminal to initiate `zsh` shell
 
 
-### Current issues
-
-- installing `nvim` plugins in `--headless` causes error output, but doesn't break installation
-- Would like to improve the install script
-
-
-### Future optimizations
-
-- Improve install script by automating step 3 above, initializing the `zsh` environment
-
-
-### Installing Tools
+### Installing Tools 
 
 - node using nvm
     - nvm install 16.13.2
+
 - tsserver
     - npm install -g typescript typescript-language-server
+
 - rustup
     - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 - rust_analyser
     - $ mkdir -p ~/.local/bin
     - $ curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
     - $ chmod +x ~/.local/bin/rust-analyzer
+
 - dotnet
     - wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
     - sudo dpkg -i packages-microsoft-prod.deb
@@ -56,6 +86,7 @@
         sudo apt-get update && \
         sudo apt-get install -y dotnet-sdk-6.0
     - dotnet tool install --global csharp-ls
+
 - golang
     - sudo apt install golang-go
 
