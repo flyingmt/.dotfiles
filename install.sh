@@ -24,7 +24,7 @@ nix-env -iA \
 	nixpkgs.go \
 	nixpkgs.python310 \
 	nixpkgs.maven \
-	nixpkgs.jdk8 \
+	nixpkgs.jdk8 
 
 # stow dotfiles
 stow git
