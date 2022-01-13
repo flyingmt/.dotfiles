@@ -3,6 +3,7 @@ local cmp_nvim_lsp = require('cmp_nvim_lsp')
 local lspkind = require('lspkind')
 local luasnip = require('luasnip')
 local nvim_lsp = require('lspconfig')
+-- local null_ls = require('null-ls')
 
 --
 -- Lspconfig

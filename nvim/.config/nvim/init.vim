@@ -36,14 +36,13 @@ set mouse=a
 call plug#begin('~/.config/nvim/plugged')
 
 " General
-Plug 'kyazdani42/nvim-web-devicons'                " Devicons
-Plug 'nvim-lualine/lualine.nvim'                   " Status line
-Plug 'akinsho/bufferline.nvim'                     " Buffers
-Plug 'machakann/vim-highlightedyank'               " Highlight yanked text
-Plug 'kyazdani42/nvim-tree.lua'                    " File explorer
-"Plug 'folke/tokyonight.nvim', { 'branch': 'main' } " Color scheme
-Plug 'ap/vim-css-color'				" CSS Color Preview
-Plug 'rafi/awesome-vim-colorschemes'	" Retro Scheme
+Plug 'kyazdani42/nvim-web-devicons'                 " Devicons
+Plug 'nvim-lualine/lualine.nvim'                    " Status line (Bottom)
+Plug 'akinsho/bufferline.nvim'                      " Buffers (Top, To close tab : Space + q)
+Plug 'machakann/vim-highlightedyank'                " Highlight yanked text
+Plug 'kyazdani42/nvim-tree.lua'                     " File explorer (Space + n)
+Plug 'ap/vim-css-color'				                " CSS Color Preview
+Plug 'rafi/awesome-vim-colorschemes'	            " Retro Scheme
 
 " Lsp
 Plug 'neovim/nvim-lspconfig'     
