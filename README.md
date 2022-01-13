@@ -69,7 +69,7 @@
 - tsserver
     - npm install -g typescript typescript-language-server
 
-- rustup
+- [Must Check Install Script] rustup
     - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 - rust_analyser
@@ -77,7 +77,7 @@
     - $ curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-x86_64-unknown-linux-gnu.gz | gunzip -c - > ~/.local/bin/rust-analyzer
     - $ chmod +x ~/.local/bin/rust-analyzer
 
-- dotnet
+- [Must Check Install Script] dotnet
     - wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
     - sudo dpkg -i packages-microsoft-prod.deb
     - rm packages-microsoft-prod.deb
@@ -85,9 +85,11 @@
         sudo apt-get install -y apt-transport-https && \
         sudo apt-get update && \
         sudo apt-get install -y dotnet-sdk-6.0
+        
+- csharp-ls
     - dotnet tool install --global csharp-ls
 
-- golang
+- [Must Check Install Script] golang
     - sudo apt install golang-go
 
 
