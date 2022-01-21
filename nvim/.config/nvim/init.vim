@@ -55,15 +55,21 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'onsails/lspkind-nvim'
+
 " Snippet completion source for nvim-cmp
 Plug 'hrsh7th/cmp-vsnip'
+
 " Other usefull completion sources
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
-" To enable more of the features of rust-analyzer, such as inlay hints and more!
-Plug 'simrat39/rust-tools.nvim'
+Plug 'hrsh7th/cmp-cmdline'
+
 " Snippet engine
 Plug 'hrsh7th/vim-vsnip'
+
+" To enable more of the features of rust-analyzer, such as inlay hints and more!
+Plug 'simrat39/rust-tools.nvim'
+" Svelte 
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
 " Git
@@ -79,11 +85,9 @@ call plug#end()
 
 lua require('flyingmt')
 
-
 " --- Colors
 
 set background=dark
-"colorscheme tokyonight
 colorscheme jellybeans
 
 " --- Remaps
