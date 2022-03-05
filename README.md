@@ -127,4 +127,11 @@
     ```bash
     $ sudo apt install golang-go
     ```
+    
+- gopls
+
+    ```bash
+    $ go install golang.org/x/tools/gopls@latest
+    ```
+  
 
