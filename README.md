@@ -74,15 +74,6 @@
     $ npm install -g typescript typescript-language-server
     ```
 
-- rustup
-    
-    Must check the nix package install works next time. 
-    If it works delete this section.
-
-    ```bash
-    $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-    ```
-
 - rust_analyser
     
     ```bash
@@ -91,43 +82,12 @@
     $ chmod +x ~/.local/bin/rust-analyzer
     ```
 
-- dotnet
-
-    Must check the nix package install works next time.
-    If it works delete this section.
-
-    Add repo.
-
-    ```bash
-    $ wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-    $ sudo dpkg -i packages-microsoft-prod.deb
-    $ rm packages-microsoft-prod.deb
-    ```
-
-    Install
-
-    ```bash
-    $ sudo apt-get update; \
-        sudo apt-get install -y apt-transport-https && \
-        sudo apt-get update && \
-        sudo apt-get install -y dotnet-sdk-6.0
-    ```
-
 - csharp-ls
 
     ```bash
     $ dotnet tool install --global csharp-ls
     ```
 
-- golang
-    
-    Must check the nix package install works next time.
-    If it works delete this section.
-
-    ```bash
-    $ sudo apt install golang-go
-    ```
-    
 - gopls
 
     ```bash
