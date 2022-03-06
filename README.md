@@ -94,4 +94,9 @@
     $ go install golang.org/x/tools/gopls@latest
     ```
   
+- protoc
+
+    ```bash
+    $ sudo apt install protobuf-compiler
+    ```
 
