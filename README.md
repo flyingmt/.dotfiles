@@ -74,6 +74,11 @@
     $ npm install -g typescript typescript-language-server
     ```
 
+- rust tool chain install
+    ```bash
+    $ rustup toolchain install stable
+    ```
+
 - rust_analyser
     
     ```bash
