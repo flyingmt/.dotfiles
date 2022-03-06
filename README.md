@@ -73,6 +73,11 @@
     ```bash
     $ npm install -g typescript typescript-language-server
     ```
+    
+- svelte
+    ```bash
+    $ npm install -g svelte-language-server
+    ```
 
 - rust tool chain install
     ```bash
