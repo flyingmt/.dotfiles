@@ -31,6 +31,7 @@
 
     ```bash
     $ sudo apt install direnv
+    $ sudo apt install trash-cli
     ```
 
 5. Change Terminal Fonts to your favorite Nerd Font
