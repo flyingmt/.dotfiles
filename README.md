@@ -110,3 +110,10 @@
     $ sudo apt install protobuf-compiler
     ```
 
+- python
+
+    ```bash
+    $ sudo apt install pipx
+    $ sudo apt install python3.8-venv
+    $ pipx install 'python-lsp-server[all]'
+    ```
