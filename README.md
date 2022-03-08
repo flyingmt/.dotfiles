@@ -112,3 +112,19 @@
     $ sudo apt install python3.8-venv
     $ pipx install 'python-lsp-server[all]'
     ```
+### Upgrading Tools
+
+- nix packages
+
+    ```bash
+    $ nix-env -u '*'
+    ```
+    
+- nvim plug
+
+    In vim :PlugUpgrade
+    
+- vim plugins
+
+    In vim :PlugUpdate
+    
