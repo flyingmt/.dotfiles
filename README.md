@@ -104,6 +104,7 @@
     ```bash
     $ go install golang.org/x/tools/gopls@latest
     ```
+    Must add the go bin folder to path.
 
 - python
 
