@@ -77,6 +77,7 @@
     
 - svelte
     ```bash
+    $ npm install -g degit
     $ npm install -g svelte-language-server
     ```
 
