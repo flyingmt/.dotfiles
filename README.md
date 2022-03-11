@@ -129,6 +129,10 @@
     $ sudo apt install gh
     ```
   
+  - Docker & Docker Compose
+  
+    Install by apt install ...
+  
 ### Upgrading Tools
 
 - nix packages
