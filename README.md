@@ -30,8 +30,7 @@
 4. Install Packages
 
     ```bash
-    $ sudo apt install direnv
-    $ sudo apt install trash-cli
+    $ sudo apt install direnv tash-cli curl net-tools git
     ```
 
 5. Change Terminal Fonts to your favorite Nerd Font
@@ -74,7 +73,8 @@
 - node using nvm
     
     ```bash
-    $ nvm install 16.13.2
+    $ nvm install 16.14.0
+    $ npm install -g prettier
     ```
 
 - tsserver
@@ -121,6 +121,19 @@
     $ sudo apt install python3.8-venv
     $ pipx install 'python-lsp-server[all]'
     ```
+ - github cli
+
+    ```bash
+    $ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+    $ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+    $ sudo apt update
+    $ sudo apt install gh
+    ```
+  
+  - Docker & Docker Compose
+  
+    Install by apt install ...
+  
 ### Upgrading Tools
 
 - nix packages
