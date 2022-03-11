@@ -30,8 +30,7 @@
 4. Install Packages
 
     ```bash
-    $ sudo apt install direnv
-    $ sudo apt install trash-cli
+    $ sudo apt install direnv tash-cli curl net-tools git
     ```
 
 5. Change Terminal Fonts to your favorite Nerd Font
