@@ -74,7 +74,7 @@
 - node using nvm
     
     ```bash
-    $ nvm install 16.13.2
+    $ nvm install 16.14.0
     ```
 
 - tsserver
