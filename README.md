@@ -61,6 +61,13 @@
 
 3. Open up new terminal to initiate `zsh` shell
 
+4. Fix the telescope-fzf-native error when running nvim
+
+    ```bash
+    $ cd ~/.dotfiles/nvim/.config/nvim/plugged/telescope-fzf-native.nvim
+    $ make
+    ```
+
 
 ### Installing Tools 
 
