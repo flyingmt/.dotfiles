@@ -74,6 +74,7 @@
     
     ```bash
     $ nvm install 16.14.0
+    $ npm install -g prettier
     ```
 
 - tsserver
