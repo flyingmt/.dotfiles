@@ -3,7 +3,7 @@ local cmp_nvim_lsp = require('cmp_nvim_lsp')
 local lspkind = require('lspkind')
 local luasnip = require('luasnip')
 local nvim_lsp = require('lspconfig')
--- local null_ls = require('null-ls')
+local null_ls = require('null-ls')
 
 --
 -- Lspconfig
@@ -58,7 +58,26 @@ for _, lsp in ipairs(servers) do
     }
 end
 
-
+-- null-ls is a general purpose language server that doesn't need
+-- the same config as actual language servers like tsserver, so
+-- setup is a little different.
+null_ls.setup({
+    sources = {
+        -- prettierd is installed globally via npm
+        null_ls.builtins.formatting.prettierd
+    },
+    on_attach = function(client, bufnr)
+        -- Autoformat
+        if client.resolved_capabilities.document_formatting then
+           vim.cmd [[augroup Format]]
+           vim.cmd [[autocmd! * <buffer>]]
+           vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+           vim.cmd [[augroup END]]
+        end
+        -- call local on_attach
+        return on_attach(client, bufnr)
+    end
+})
 
 --
 -- Nvim-cmp
@@ -109,10 +128,26 @@ cmp.setup {
   },
   sources = {
     { name = 'nvim_lsp' },
+    { name = 'vsnip' },
     { name = 'luasnip' }
   },
 }
 
+  -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline('/', {
+    sources = {
+      { name = 'buffer' }
+    }
+  })
+
+  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+  cmp.setup.cmdline(':', {
+    sources = cmp.config.sources({
+      { name = 'path' }
+    }, {
+      { name = 'cmdline' }
+    })
+  })
 
 --
 -- Diagnostics

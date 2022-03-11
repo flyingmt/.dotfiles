@@ -2,23 +2,30 @@
 
 let mapleader = " "
 
+set nocompatible						" disable compatibility to old-time vi
+set showmatch							" show matching
+set ignorecase							" case insensitive
+set mouse=v								" middle-click past with
+set hlsearch							" highlight search
+set nohlsearch
+set incsearch							" incremental search
+set tabstop=4							" number of columns as occupied by a tab
+set softtabstop=4						" see multiple spaces as tabstops so <BS> does the right thing
+set expandtab							" converts tabs to white space
+set shiftwidth=4						" width for autoindents
+"set autoindent							" indent a new line the same amount as the line just typed
 set termguicolors
-set tabstop=4 
-set softtabstop=4
-set shiftwidth=4
-set expandtab
 set smartindent
-set number
+set number								" add line numbers
+set wildmode=longest,list				" get bash-like tab completions
+set cc=80								" set an 80 column border for good coding
 set numberwidth=1
 set relativenumber
 set signcolumn=yes
-set noswapfile
-set nobackup
+set noswapfile							" disable creating swap file
+set nobackup							" disable creating backup file
 set undodir=~/.config/nvim/undodir
 set undofile
-set incsearch
-set nohlsearch
-set ignorecase
 set smartcase
 set nowrap
 set splitbelow
@@ -28,8 +35,9 @@ set scrolloff=999
 set noshowmode
 set updatetime=250 
 set encoding=UTF-8
-set mouse=a
-
+set mouse=a								" enable mouse click
+set clipboard=unnamedplus				" using system clipboard filetype plugin on
+set cursorline							" highlight current cursorline
 
 " --- Plugins
 
@@ -46,7 +54,7 @@ Plug 'rafi/awesome-vim-colorschemes'	            " Retro Scheme
 
 " Lsp
 Plug 'neovim/nvim-lspconfig'     
-"Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Autocompletion
@@ -69,6 +77,7 @@ Plug 'hrsh7th/vim-vsnip'
 
 " To enable more of the features of rust-analyzer, such as inlay hints and more!
 Plug 'simrat39/rust-tools.nvim'
+
 " Svelte 
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
@@ -78,6 +87,7 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'nvim-lua/plenary.nvim'
 
 " Telescope
+Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
@@ -99,6 +109,7 @@ nnoremap <leader>l :wincmd l<Cr>
 nnoremap <silent><leader>[ :BufferLineCyclePrev<Cr>
 nnoremap <silent><leader>] :BufferLineCycleNext<Cr>
 nnoremap <silent><leader>q :bdelete<Cr>
+
 
 " Save
 nnoremap <silent> <C-S> :w<cr>
